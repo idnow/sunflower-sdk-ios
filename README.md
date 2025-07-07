@@ -1,7 +1,7 @@
 # Sunflower - iOS
 
 
-![SPM](https://img.shields.io/badge/spm-_External_1.4.2-blue) ![UIKit](https://img.shields.io/badge/UIKit-Supported-green) ![SwiftUI](https://img.shields.io/badge/SwiftUI-Not_supported-red)
+![SPM](https://img.shields.io/badge/Swift_Package_Manager-_v1.4.2-blue) ![Pod](https://img.shields.io/badge/Pods-Not_available-red) ![UIKit](https://img.shields.io/badge/UIKit-Supported-green) ![SwiftUI](https://img.shields.io/badge/SwiftUI-Not_supported-red)
 
 ![sunflower](docs/img/logo.png "Sunflower")
 
@@ -11,16 +11,15 @@ Welcome to the public Sunflower SDK. Sunflower is the IDnow Design System, a lib
 
 ## Setup
 
-Sunflower is available via Swift Package Manager only. We do not support pods integration anymore since the 1.4.2 version.
+Sunflower is available via Swift Package Manager only. We do not support pods integration.
 
-> ⚠️ Lottie is required to run Sunflower, so you need to import it either via SPM or Cocoapods. Note that it will be automatically imported since the 1.4.2 version.
+> ⚠️ Lottie is required to run Sunflower, it will be automatically imported.
 
 ### Swift Package Manager
 
 For external usage
 ```
 Source : https://github.com/idnow/sunflower-sdk-ios
-Lottie source : https://github.com/airbnb/lottie-spm.git (now automatically imported when you import Sunflower)
 
 Exact version : <version_you_want>
 ```
