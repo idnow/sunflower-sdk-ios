@@ -11,6 +11,10 @@ let package = Package(
         .library(
             name: "SunflowerUIKit",
             targets: ["SunflowerUIKitWrapper"]
+        ),
+        .library(
+            name: "SunflowerSwiftUI",
+            targets: ["SunflowerSwiftUIWrapper"]
         )
     ],
     dependencies: [
@@ -19,17 +23,31 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "SunflowerUIKit",
-            url: "https://github.com/idnow/sunflower-sdk-ios/releases/download/1.4.12/SunflowerUIKit.xcframework.zip",
-            checksum: "a090647cea4cde84fcb1b334b6018c4841ef6761699cbc749c0fb617f12ff95b"
+            url: "https://github.com/idnow/sunflower-sdk-ios/releases/download/2.0.0/SunflowerUIKit.xcframework.zip",
+            checksum: "4458a78c9f88d2bfefd806beed2f872ae7f9d184ac928de0e2f80e03017bc574"
+        ),
+        .binaryTarget(
+            name: "SunflowerSwiftUI",
+            url: "https://github.com/idnow/sunflower-sdk-ios/releases/download/2.0.0/SunflowerSwiftUI.xcframework.zip",
+            checksum: "df509beb6a2f56a69fccefab35711e4819060e3da114afd82157405c55cf62b5"
         ),
         .target(
-             // Main target which contains both Sunflower and the lottie dependency. Automatically downloaded when client fetch Sunflower.
+             // Main target which contains both SunflowerUIKit and the lottie dependency. Automatically downloaded when client fetch Sunflower.
             name: "SunflowerUIKitWrapper",
             dependencies: [
                 "SunflowerUIKit",
                 .product(name: "Lottie", package: "lottie-spm")
             ],
             path: "sources"
+        ),
+        .target(
+             // Main target which contains both SunflowerSwiftUI and the lottie dependency. Automatically downloaded when client fetch Sunflower.
+            name: "SunflowerSwiftUIWrapper",
+            dependencies: [
+                "SunflowerSwiftUI",
+                .product(name: "Lottie", package: "lottie-spm")
+            ],
+            path: "sources-swiftui"
         )
     ]
 )
