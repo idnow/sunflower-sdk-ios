@@ -18,18 +18,18 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/airbnb/lottie-spm.git", exact: "4.5.2")
+        .package(url: "https://github.com/airbnb/lottie-spm.git", exact: "4.6.1")
     ],
     targets: [
         .binaryTarget(
             name: "SunflowerUIKit",
-            url: "https://github.com/idnow/sunflower-sdk-ios/releases/download/2.1.16/SunflowerUIKit.xcframework.zip",
-            checksum: "77139d415798d4e1aba6fea2e6d7452169e2a563017efbf68418441be416fe21"
+            url: "https://github.com/idnow/sunflower-sdk-ios/releases/download/2.1.17/SunflowerUIKit.xcframework.zip",
+            checksum: "710ff4bb4dd6fc074ce3704cca3aa7347af861895ed4d9cd79a87558a29fd7e5"
         ),
         .binaryTarget(
             name: "SunflowerSwiftUI",
-            url: "https://github.com/idnow/sunflower-sdk-ios/releases/download/2.1.16/SunflowerSwiftUI.xcframework.zip",
-            checksum: "3ff71279900d7b631461cc6d8781ac62076a34023c84da0a2a873179092f06f9"
+            url: "https://github.com/idnow/sunflower-sdk-ios/releases/download/2.1.17/SunflowerSwiftUI.xcframework.zip",
+            checksum: "55c0011ad18dd721518e398cbf8ab02ba9b2b82f3ae2fd9fd3eb4eb042dfe681"
         ),
         .target(
              // Main target which contains both SunflowerUIKit and the lottie dependency. Automatically downloaded when client fetch Sunflower.
