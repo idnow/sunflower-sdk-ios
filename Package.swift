@@ -23,13 +23,13 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "SunflowerUIKit",
-            url: "https://github.com/idnow/sunflower-sdk-ios/releases/download/2.2.0/SunflowerUIKit.xcframework.zip",
-            checksum: "7f98eb056a46db53ee576ed9a613733374a4f502a9eebc327b52f357d854bded"
+            url: "https://github.com/idnow/sunflower-sdk-ios/releases/download/2.2.1/SunflowerUIKit.xcframework.zip",
+            checksum: "be6fad022a43dd529b7521c5536bf5ca93a5ae18779b94c79d5186b7a168f770"
         ),
         .binaryTarget(
             name: "SunflowerSwiftUI",
-            url: "https://github.com/idnow/sunflower-sdk-ios/releases/download/2.2.0/SunflowerSwiftUI.xcframework.zip",
-            checksum: "6465621b31b3f6a94ba1532a6aa8f13217d7dfee5f9a53617cc037efd1d2ff09"
+            url: "https://github.com/idnow/sunflower-sdk-ios/releases/download/2.2.1/SunflowerSwiftUI.xcframework.zip",
+            checksum: "5960cc3de242329afcb15476d39afe260b7d5880da864fc9e34a36af3c61e0eb"
         ),
         .target(
              // Main target which contains both SunflowerUIKit and the lottie dependency. Automatically downloaded when client fetch Sunflower.

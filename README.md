@@ -1,9 +1,9 @@
 # Sunflower - iOS
 
 
-![SPM](https://img.shields.io/badge/Swift_Package_Manager-_v1.4.2-blue) ![Pod](https://img.shields.io/badge/Pods-Not_available-red) ![UIKit](https://img.shields.io/badge/UIKit-Supported-green) ![SwiftUI](https://img.shields.io/badge/SwiftUI-Not_supported-red)
+![SPM](https://img.shields.io/badge/SwiftPackageManager-2.2.1-blue) ![CocoaPod](https://img.shields.io/badge/CocoaPods-Not_supported-red) ![UIKit](https://img.shields.io/badge/UIKit-Supported-green) ![SwiftUI](https://img.shields.io/badge/SwiftUI-Supported-green)
 
-![sunflower](docs/img/logo.png "Sunflower")
+<img src="docs/Common/img/logo.png" alt="Sunflower" title="Sunflower" width="150" height="150"/>
 
 ## Description
 
@@ -17,7 +17,6 @@ Sunflower is available via Swift Package Manager only. We do not support pods in
 
 ### Swift Package Manager
 
-For external usage
 ```
 Source : https://github.com/idnow/sunflower-sdk-ios
 
@@ -26,11 +25,17 @@ Exact version : <version_you_want>
 
 ## Customization
 
-SunflowerUIKit have default values corresponding to the internal IDnow theme. 
-If you want to use your own theme, you must add this import to your file.
+SunflowerUIKit and SunflowerSwiftUI have default values corresponding to the internal IDnow theme. 
+If you want to use your own theme, you must add one of these imports to your file, depending on the Sunflower version you are using.
 
 ```swift
 import SunflowerUIKit
+```
+
+or 
+
+```swift
+import SunflowerSwiftUI
 ```
 
 Then you can create a theme with desired colors, radius and spacing.
@@ -78,27 +83,43 @@ let customSpacing = IDnowSpacing(
     spacing5: 48,
     spacing6: 56
 )
+
+// Set your fonts
+let customFont = SunflowerUIKit.IDnowFont(
+    fontFamily: IDnowFontFamily(heading: [400: myRegularFont, 500: myMediumFont]),
+    fontSize: IDnowFontSize(),
+    fontWeight: IDnowFontWeight(default: 400, prominent: 500)
+)
+
 let primitives = IDnowPrimitives(
     colors: customColors, 
     radius: customRadius, 
-    spacing: customSpacing
+    spacing: customSpacing,
+    font: customFont
 )
 ```
 
 Then, you need to apply your custom theme like this
-```
+```swift
 IDnowDesignSystem.shared.setup(primitives: primitives, isLightMode: true)
 ```
 It needs to be done only one time, no need to do it each time you want to use a component.
 
 ## Components
 
-Sunflower is composed of several components like custom text, button, textfields or views. It is only available for UIKit integration. 
+Sunflower is composed of several components like custom text, button, textfields or views. It is available for UIKit and SwiftUI integration. 
 
-### How to integrate
-To integrate the Sunflower library, simply import the SDK like that.
+### How to integrate UIKit
+To integrate the Sunflower UIKit library, simply import the SDK like that.
 ```swift
 import SunflowerUIKit
+```
+If you want to use the available components, you can find the documentation of each of our components inside the /docs folders. It describes the component and how to integrate it.
+
+### How to integrate SwiftUI
+To integrate the Sunflower SwiftUI library, simply import the SDK like that.
+```swift
+import SunflowerSwiftUI
 ```
 If you want to use the available components, you can find the documentation of each of our components inside the /docs folders. It describes the component and how to integrate it.
 
