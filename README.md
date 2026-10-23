@@ -1,7 +1,7 @@
 # Sunflower - iOS
 
 
-![SPM](https://img.shields.io/badge/SwiftPackageManager-2.2.2-blue) ![CocoaPod](https://img.shields.io/badge/CocoaPods-Not_supported-red) ![UIKit](https://img.shields.io/badge/UIKit-Supported-green) ![SwiftUI](https://img.shields.io/badge/SwiftUI-Supported-green)
+![SPM](https://img.shields.io/badge/SwiftPackageManager-2.2.3-blue) ![CocoaPod](https://img.shields.io/badge/CocoaPods-Not_supported-red) ![UIKit](https://img.shields.io/badge/UIKit-Supported-green) ![SwiftUI](https://img.shields.io/badge/SwiftUI-Supported-green)
 
 <img src="docs/Common/img/logo.png" alt="Sunflower" title="Sunflower" width="150" height="150"/>
 
